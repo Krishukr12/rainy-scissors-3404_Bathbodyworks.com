@@ -1,5 +1,12 @@
+
+import AllCare from './Pages/AllCare';
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <AllCare/>
+    </div>
+  );
 }
 
 export default App;

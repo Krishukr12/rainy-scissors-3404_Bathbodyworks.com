@@ -1,0 +1,65 @@
+.Signup_components{
+
+}
+
+.facebook {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0.5px solid black;
+    width: 45%;
+    height: 45px;
+    border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.google {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0.5px solid black;
+    width: 45%;
+    height: 45px;
+    border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.facebook_icon {
+    width: 20px;
+    height: 25px;
+}
+
+.google_icon {
+    width: 20px;
+    height: 25px;
+
+}
+
+.other_options {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.sign_in_below {
+    margin: 20px 0px;
+    font-size: 15px;
+    color: #000;
+    margin-left: 0;
+}
+
+.Signin_title {
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+.via_bbwlogin {
+    width: 30%;
+    text-align: center;
+    border-bottom: 1px solid #E6E6E6;
+    line-height: 20px;
+    position: absolute;
+    margin-bottom: 10px;
+}
