@@ -1,0 +1,33 @@
+.mainContainer {
+  /* border: 1px solid red; */
+  /* I have to delete during merge time  */
+  margin-top: 7.5rem;
+  height: 20rem;
+  /* width: 100%; */
+  display: flex;
+}
+.left_side_bar {
+  border: 1px solid red;
+  height: 100rem;
+  width: 20%;
+}
+.right_side_bar {
+  border: 1px solid red;
+  height: 100rem;
+  width: 80%;
+}
+.home_frangnace_div {
+  border-bottom: 1px solid black;
+  height: 6rem;
+  width: 100%;
+  font-family: TradeGothicLTW05-BoldNo\.2, Arial, sans-serif;
+  position: relative;
+}
+.home_frangnace_div > span {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #333;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
