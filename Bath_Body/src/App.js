@@ -1,10 +1,10 @@
 
-import Login from './bharat_page/Login.jsx';
+import AllCare from './Pages/AllCare';
 
 function App() {
   return (
-    <div >
-   <Login/>
+    <div>
+      <AllCare/>
     </div>
   );
 }
