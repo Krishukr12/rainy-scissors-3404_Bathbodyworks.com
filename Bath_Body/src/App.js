@@ -1,10 +1,5 @@
-import { HomeFragnance } from "./Pages/Home Fragnance/HomeFragnance";
 function App() {
-  return (
-    <div>
-      <HomeFragnance />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
