@@ -1,0 +1,71 @@
+
+
+.frgt_pswrd{
+    font-size: 24px;
+    color: #666666;
+}
+.parent_frgt_pswrd{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+
+.parent_frgt_pswrd div label{
+    width: 95px;
+    height: 23px;
+}
+.parent_frgt_pswrd_input{
+    height: 16px;
+    width: 16px;
+    top: 4px;
+    margin-right: 10px;
+}
+.facebook{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0.5px solid black;
+    width: 45%;
+    height: 45px;
+    border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
+}
+.google {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0.5px solid black;
+    width: 45%;
+    height:45px;
+    border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
+}
+.facebook_icon{
+    width: 20px;
+    height: 25px;
+}
+.google_icon {
+    width: 20px;
+    height: 25px;
+    
+}
+.other_options{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.sign_in_below{
+    margin: 35px 0px;
+    font-size: 15px;
+    color: #000;
+    margin-left: 0;
+}
+.Signin_title{
+    color: #333333;
+    margin-bottom: 40px;
+}
+.via_bbwlogin{
+        display: flex;
+}
