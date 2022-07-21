@@ -25,6 +25,8 @@
             left: calc(50% - 11px);
             text-align: center;
             line-height: 37px;
+            margin-top: 190px;
+            
            
 }
 .line{
@@ -35,4 +37,14 @@
         width: 1px;
         background: #ccc;
         z-index: 1;
+        margin-top: 190px;
+}
+
+@media all and (min-width:50px) and (max-width:720px) {
+    .wordwrapper{
+        display:none;
+    }
+    .line{
+        display:none;
+    }
 }

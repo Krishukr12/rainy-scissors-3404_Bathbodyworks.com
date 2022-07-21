@@ -1,0 +1,39 @@
+
+
+.Custom_tabs_image_parent{
+    background-color: rgb(0, 115, 180);
+            display: flex;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+            border-radius: 50%;
+            align-items: center;    
+                margin: 20px;
+                width: 40px ;
+                    height: 40px;
+                    justify-content: center;
+}
+.Custom_tabs_main{
+    display: flex;
+    justify-content: center;
+}
+.dots{
+    border-radius: 50%;
+        margin: 38px 0;
+        width: 6px;
+        height: 6px;
+        left: 799px;
+        top: 304px;
+        background: #C4C4C4;
+}
+.dots_parent{
+    display: flex;
+    gap:9px;
+}
+img{
+    width: 24px;
+    height: 24px;
+}
