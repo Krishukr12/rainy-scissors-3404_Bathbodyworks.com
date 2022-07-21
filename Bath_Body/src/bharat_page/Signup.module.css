@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&family=Lato:wght@300&family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+.img_large_scr {
+    margin: auto;
+    width: 65%;
+}
+
+.title_main {
+    border-bottom: 1px solid #666666;
+        margin-top: 45px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 34px;
+        color: #333333;
+
+}
+
+.title_main_div {
+    width: 65%;
+    margin: auto;
+    margin-top: 20px;
+}
+.Signup_form_main{
+    width: 25%;
+    margin: auto;
+}
+.input_name{
+    margin: 10px 0px;
+}
+.privacy_policy{
+    text-align: center;
+    margin: 10px 0px;
+
+}
+.reward_text{
+width: 345px;
+    height: 17px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    margin-left: 267px;
+    margin-top: 8px
+}
+ .img_small_scr {
+     display: none;
+ }
+@media all and (min-width:361px) and (Max-width:760px){
+     .Signup_form_main {
+        width: 70%;
+        margin: auto;
+    }
+     .img_large_scr  {
+          display: none;
+         }
+    
+      .img_small_scr {
+          display: block;
+          margin: auto;
+          width: 60%;
+        
+      }
+}
+@media all and (min-width:0px) and (Max-width:360px) {
+    .Signup_form_main {
+        width: 90%;
+        margin: auto;
+    }
+         .img_large_scr {
+             display: none;
+         }
+    
+         .img_small_scr {
+            display: block;
+           margin: auto;
+            width: 80%;
+
+         }
+}
