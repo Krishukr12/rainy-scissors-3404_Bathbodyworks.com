@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./HomeFragnance.module.css";
+import axios from "axios";
 import ReactPaginate from "react-paginate";
 import { SingleItem } from "../../Components/krishan/SingleItem";
 export const HomeFragnance = () => {
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/newFragrance")
+      .then((r) => console.log(r.data))
+      .then((error) => console.log(error));
+  }, []);
   return (
     <div className={classes.mainContainer}>
       <div className={classes.left_side_bar}></div>
