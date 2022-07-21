@@ -22,7 +22,7 @@
   height: 300px;
 }
 .add_to_bag_button:hover {
-  background-color: white;
+  background-color: rgb(242, 235, 235);
   color: black;
 }
 .product_title {

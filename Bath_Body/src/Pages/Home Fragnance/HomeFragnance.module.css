@@ -1,20 +1,20 @@
 .mainContainer {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* I have to delete during merge time  */
   margin-top: 7.5rem;
-  height: 20rem;
+  height: auto;
   /* width: 100%; */
   display: flex;
 }
 .left_side_bar {
   border: 1px solid red;
   height: 100rem;
-  width: 20%;
+  width: 18%;
 }
 .right_side_bar {
   border: 1px solid red;
-  height: 100rem;
-  width: 80%;
+  height: max-content;
+  width: 82%;
 }
 .home_frangnace_div {
   border-bottom: 1px solid black;
@@ -33,7 +33,7 @@
   position: absolute;
   bottom: 0.625rem;
   left: 0.625rem;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 /* Pagination Css ----------------------------------------------------*/
 .pagination {
@@ -63,29 +63,30 @@
   display: flex;
   margin: auto;
   font-family: Trade Gothic W01 Bold_2, Arial, sans-serif;
+  border: 1px solid red;
 }
 .filter_div {
-  /* border: 1px solid red; */
-  height: 55px;
+  border: 1px solid red;
+  height: 3.438rem;
   width: 78%;
   margin-top: 3%;
   background-color: #f2f2f2;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .sort_div {
-  height: 55px;
+  height: 3.438rem;
   width: 20%;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   margin-top: 3%;
 }
 .filter_h1 {
-  font-size: 17px;
+  font-size: 1.063rem;
   font-weight: bold;
-  padding: 15px;
+  padding: 0.938rem;
 }
 .filter_select {
-  width: 230px;
+  width: 14.375rem;
   font-size: 0.9099rem;
   font-weight: 400;
   border-bottom: 3px solid #333;
@@ -97,16 +98,40 @@
   font-size: 0.9099rem;
   font-weight: 550;
   border-bottom: 3px solid #333;
-  height: 55px;
+  height: 3.438rem;
   letter-spacing: 0.5px;
-  margin-left: 10px;
-  width: 200px;
+  margin-left: 0.625rem;
+  width: 12.5rem;
   color: #666;
   outline: none;
 }
 /* .........product_container */
 .product_container {
   border: 1px solid red;
-  height: 500px;
+  height: auto;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.625;
+  justify-items: center;
+}
+/* left Side bar Css */
+.top_offer_section {
+  /* border: 1px solid red; */
+  height: 15rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.offer_header {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #333;
+  font-family: Trade Gothic W01 Bold_2, Arial, sans-serif;
+  line-height: 1rem;
+}
+.offer_link_section {
+  /* border: 1px solid red; */
+  display: block;
+  padding-top: 8px;
 }
