@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&family=Lato:wght@300&family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');    
 
 .frgt_pswrd{
     font-size: 24px;
@@ -7,7 +7,7 @@
 .parent_frgt_pswrd{
  display: flex;
  align-items: center;
- justify-content: space-around;
+ justify-content: space-between;
 }
 
 .parent_frgt_pswrd div label{
@@ -25,22 +25,27 @@
     align-items: center;
     gap: 10px;
     border: 0.5px solid black;
-    width: 45%;
-    height: 45px;
+    width: auto;
     border-radius: 8px;
     justify-content: center;
     cursor: pointer;
+    height: auto;
+        padding: 8px 8px;
+    color:rgb(112, 174, 230);
+
 }
 .google {
     display: flex;
     align-items: center;
     gap: 10px;
     border: 0.5px solid black;
-    width: 45%;
-    height:45px;
+    width: auto;
+    height: 45px;
+    padding: 8px 8px;
     border-radius: 8px;
     justify-content: center;
     cursor: pointer;
+    color:rgb(255, 25, 32);
 }
 .facebook_icon{
     width: 20px;
@@ -53,7 +58,7 @@
 }
 .other_options{
     display: flex;
-    justify-content: space-evenly;
+    gap:5%;
     margin-bottom: 20px;
 }
 .sign_in_below{
@@ -64,8 +69,26 @@
 }
 .Signin_title{
     color: #333333;
+   text-align: center;
     margin-bottom: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 }
 .via_bbwlogin{
         display: flex;
+}
+.Login_main {
+   display: flex;
+   width:65%;
+   justify-content: space-between;
+   gap:50px;
+}
+@media all and (min-width:50px) and (max-width:720px) {
+    .Login_main {
+        display: block;
+        margin: auto;
+
+    }
+
 }

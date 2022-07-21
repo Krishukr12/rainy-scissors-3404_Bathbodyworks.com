@@ -1,10 +1,14 @@
-import { legacy_createStore,combineReducers, applyMiddleware } from "redux";
-import thunk from 'redux-thunk';
+
+import { applyMiddleware, combineReducers, compose, legacy_createStore } from "redux";
+import { reducer as AuthReducer} from "./Authreducer/reducer";
+import thunk from "redux-thunk"
 import { ArfReducer } from "./ArfReducer/reducer";
 
-const reducer=combineReducers({
-    arfreducer:ArfReducer
-})
 
+const rootreducer=combineReducers({
+    AuthReducer:AuthReducer,
+    ArfReducer:ArfReducer})
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const store=legacy_createStore(reducer,applyMiddleware(thunk));
+export const store=legacy_createStore(rootreducer,applyMiddleware(composeEnhancers(thunk)))
+

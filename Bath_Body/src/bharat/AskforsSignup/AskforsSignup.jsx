@@ -7,9 +7,9 @@ import {FcGoogle} from 'react-icons/fc'
 const AskforsSignup = () => {
   return (
     <div className={styles.Signup_components}>
-             <h2 className={styles.Signin_title}>SIGN IN</h2>
+             <h2 className={styles.Signin_title}>SIGN UP</h2>
     
-           
+           <p className={styles.create_text}>Create an account to access the best of your favorite store</p>
               <div className={styles.other_options}>
     <div className={styles.facebook}><FaFacebookF className={styles.facebook_icon}/> Login With facebook</div>
     <div className={styles.google}><FcGoogle className={styles.google_icon}/> Login With Google</div>
