@@ -1,7 +1,14 @@
 import React from 'react'
+import { useEffect } from 'react';
 import styles from './rightma.module.css';
+import {useDispatch} from 'react-redux'
+import { getData } from '../../Redux/ArfReducer/action';
 
 const Rightma = () => {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+     dispatch(getData());
+  },[dispatch])
   return (
     <div className={styles.contai}>
       <h1 className={styles.headinga}>All Bath & Shower</h1>
