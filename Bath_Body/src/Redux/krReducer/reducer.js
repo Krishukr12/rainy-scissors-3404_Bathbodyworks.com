@@ -2,6 +2,7 @@ import {
   GET_FRAGNANCE_DATA_SUCCESS,
   GET_FRAGNANCE_DATA_FAILED,
   GET_FRAGNANCE_DATA_REQUEST,
+  UPDATE_DATA_ASC,
 } from "./actionType";
 const initalState = {
   Fdata: [],
@@ -30,6 +31,12 @@ export const kreducer = (state = initalState, action) => {
         ...state,
         isLoading: false,
         isError: true,
+      };
+    }
+    case UPDATE_DATA_ASC: {
+      return {
+        ...state,
+        Fdata: action.payload,
       };
     }
     default: {

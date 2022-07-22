@@ -4,16 +4,13 @@ import classes from "./HomeFragnance.module.css";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
 import { SingleItem } from "../../Components/krishan/SingleItem";
-import { getData1 } from "../../Redux/krReducer/action";
+import { getData1, getData2 } from "../../Redux/krReducer/action";
 export const HomeFragnance = () => {
-  const [fragnaceData, setfragnanceData] = useState([]);
-  const data = useSelector((state) => state.Freducer);
+  const data = useSelector((state) => state.Freducer.Fdata);
   const dispatch = useDispatch();
   useEffect(() => {
     getData1(dispatch);
-   
   }, []);
-  console.log(data);
 
   return (
     <div className={classes.mainContainer}>
@@ -79,7 +76,7 @@ export const HomeFragnance = () => {
           <div className={classes.sort_div}>
             <select
               className={classes.sort_select}
-              onChange={(e) => console.log(e.target.value)}
+              onChange={(e) => getData2(dispatch, e.target.value)}
             >
               <option>SORT BY</option>
               <option value="asc">Price High to low</option>
@@ -88,10 +85,9 @@ export const HomeFragnance = () => {
           </div>
         </div>
         <div className={classes.product_container}>
-          {fragnaceData.length > 0 &&
-            fragnaceData.map((data) => {
-              return <SingleItem key={data.id} data={data} />;
-            })}
+          {data?.map((data) => {
+            return <SingleItem key={data.id} data={data} />;
+          })}
         </div>
       </div>
     </div>
