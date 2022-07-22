@@ -67,6 +67,9 @@ display: flex;
     font-size: 15px;
     margin: 0 0 16px;
 }
+.Signup_components {
+   width: 40%;
+}
 @media all and (min-width:50px) and (max-width:720px) {
 .Signup_components{
     margin-top: 40px;
