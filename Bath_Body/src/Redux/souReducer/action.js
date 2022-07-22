@@ -1,0 +1,28 @@
+
+export const ADD_CART = "Add_CART"
+
+
+
+export const addProducts = async (dispatch,img, name, subname, Price,type) => {
+  let r = await fetch("http://localhost:8080/cart", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      img,
+      name,
+      subname,
+      Price,
+      type,
+      "quantity":1,
+    }),
+  });
+  let res = await fetch("http://localhost:8080/cart");
+  let data = await res.json();
+  dispatch({
+    type: ADD_CART,
+    payload: data,
+  })
+};
+
+
+

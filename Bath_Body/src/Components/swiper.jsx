@@ -1,3 +1,4 @@
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "../css/homepage.module.css";
 import "swiper/css";
@@ -6,10 +7,10 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 import CATEGORY from "../data/homepage.json";
-
 export default function Slider() {
   let SlideData = CATEGORY.SlideData;
-  return ( 
+  return (
+   
     <div className={styles.boxesofOffer}>
       <h1>TODAY'S TOP OFFERS</h1>
       <Swiper

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../css/dropDown.module.css";
- import Title from "../data/dropDown.json";
+import Title from "../data/dropDown.json";
 import {Link} from "react-router-dom"
 
 export const Dropdown = () => {
