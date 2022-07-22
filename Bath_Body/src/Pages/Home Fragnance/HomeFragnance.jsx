@@ -1,27 +1,55 @@
 import React, { useEffect, useState } from "react";
 import classes from "./HomeFragnance.module.css";
-import axios from "axios";
+
 import ReactPaginate from "react-paginate";
+import { useDispatch, useSelector } from "react-redux";
 import { SingleItem } from "../../Components/krishan/SingleItem";
+import { getData1 } from "../../Redux/krReducer/action";
 export const HomeFragnance = () => {
   const [fragnaceData, setfragnanceData] = useState([]);
+  const data = useSelector((state) => state.Freducer);
+  const dispatch = useDispatch();
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/newFragrance")
-      .then((r) => {
-        setfragnanceData(r.data);
-      })
-      .catch((error) => console.log(error));
+    getData1(dispatch);
+   
   }, []);
+  console.log(data);
 
   return (
     <div className={classes.mainContainer}>
       <div className={classes.left_side_bar}>
         <div className={classes.top_offer_section}>
-          <span className={classes.offer_header}>TOP OFFERS</span><br></br>
-          <span className={classes.offer_link_section}>5/$25 Wallflowers Fragrance Refills</span><br></br>
-          <span className={classes.offer_link_section}>3/$22 Room Sprays</span><br></br>
-          <span className={classes.offer_link_section}>3/$10 Car Fragrance Refills</span><br></br>
+          <span className={classes.offer_header}>TOP OFFERS</span>
+          <br></br>
+          <span className={classes.offer_link_section}>
+            5/$25 Wallflowers Fragrance Refills
+          </span>
+          <br></br>
+          <span className={classes.offer_link_section}>3/$22 Room Sprays</span>
+          <br></br>
+          <span className={classes.offer_link_section}>
+            3/$10 Car Fragrance Refills
+          </span>
+          <br></br>
+        </div>
+        <div className={classes.top_offer_section}>
+          <span className={classes.offer_header}>All Wallflowers</span>
+          <br></br>
+          <span className={classes.offer_link_section}>Wallflowers Plugs</span>
+          <br></br>
+          <span className={classes.offer_link_section}>
+            Room Sprays & Mists
+          </span>
+          <br></br>
+          <span className={classes.offer_link_section}>Car Fragrance</span>
+          <br></br>
+        </div>
+        <div className={classes.top_offer_section}>
+          <span className={classes.offer_header}>FEATURED</span>
+          <br></br>
+          <span className={classes.offer_link_section}>
+            Auto Refresh Wallflowers
+          </span>
         </div>
       </div>
       <div className={classes.right_side_bar}>
@@ -49,15 +77,21 @@ export const HomeFragnance = () => {
             </select>
           </div>
           <div className={classes.sort_div}>
-            <select className={classes.sort_select}>
+            <select
+              className={classes.sort_select}
+              onChange={(e) => console.log(e.target.value)}
+            >
               <option>SORT BY</option>
+              <option value="asc">Price High to low</option>
+              <option value="desc">Price Low to high</option>
             </select>
           </div>
         </div>
         <div className={classes.product_container}>
-          {fragnaceData.map((data) => {
-            return <SingleItem key={data.id} data={data} />;
-          })}
+          {fragnaceData.length > 0 &&
+            fragnaceData.map((data) => {
+              return <SingleItem key={data.id} data={data} />;
+            })}
         </div>
       </div>
     </div>
