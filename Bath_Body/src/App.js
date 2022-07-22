@@ -1,11 +1,11 @@
-import Checkout from "./bharat_page/Checkout.jsx";
-import Login from "./bharat_page/Login.jsx"
-import Signup from "./bharat_page/Signup"
 
+import MainRoutes from "./Routing/Routes";
+import { Navbar } from "./Components/Navbar";
 function App() {
   return (
-    <div>
-   <Signup/>
+    <div className="App">
+       <Navbar/>
+      <MainRoutes/>
     </div>
   );
 }

@@ -39,3 +39,18 @@
     color: black;
     border: none;
 }
+.mainconta{
+    display: grid;
+    width:1000px;
+    height: 1000px;
+    margin-top: 20px;
+    border: 1px solid black;
+    grid-template-columns: repeat(4,230px);
+    grid-template-rows: auto;
+    /* grid-template-rows: repeat(inherit,502px); */
+}
+.mainconta>div{
+    width:230px;
+    height: 502px;
+    border: 1px solid red;
+}

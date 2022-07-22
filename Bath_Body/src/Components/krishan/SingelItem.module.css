@@ -1,0 +1,45 @@
+.singel_item_container {
+  /* border: 1px solid red; */
+  height: 490px;
+  width: 240px;
+  text-align: center;
+  display: inline-block;
+  font-family: Trade Gothic W01 Regular, Trade Gothic W01 Light, Arial,
+    sans-serif;
+}
+.add_to_bag_button {
+  background-color: #333333;
+  color: white;
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.product_image {
+  width: 100%;
+  height: 300px;
+}
+.add_to_bag_button:hover {
+  background-color: rgb(242, 235, 235);
+  color: black;
+}
+.product_title {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+  letter-spacing: 0.5px;
+  font-family: TradeGothicLTW05-BoldNo\.2, Arial, sans-serif;
+}
+.product_subtitle {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  color: #333;
+}
+.product_price {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 1.2rem;
+}
