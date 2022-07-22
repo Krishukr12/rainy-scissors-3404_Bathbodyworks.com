@@ -3,12 +3,16 @@ import { useEffect } from 'react';
 import styles from './rightma.module.css';
 import {useDispatch, useSelector} from 'react-redux'
 import { getData, getData1, getData2, getData3 } from '../../Redux/ArfReducer/action';
-// import Singledata from './Singledata';
+import Singledata from './Singledata';
+import {useSearchParams} from 'react-router-dom'
 
 const Rightma = () => {
-  const {data}=useSelector((state)=>state.arfreducer);
+  const {data}=useSelector((state)=>state.ArfReducer);
   // console.log(data);
-const [val,setVal]=useState('All Bath & Shower');
+  const [val,setVal]=useState('All Bath & Shower');
+  const [searchParams,setSearchParams]=useSearchParams();
+  const [categoryValue,setCategoryValue]=useState(
+    searchParams.getAll("category")||[]);
 
   const dispatch=useDispatch();
   useEffect(()=>{
@@ -22,11 +26,13 @@ const [val,setVal]=useState('All Bath & Shower');
     else{
       dispatch(getData1());
     }
-  },[dispatch,val])
+    setSearchParams({category:categoryValue})
+  },[dispatch,val,categoryValue,setSearchParams])
 
   const handleChange=(e)=>{
     //  console.log(e.target.value);
     setVal(e.target.value);
+    setCategoryValue(e.target.value);
   }
   return (
     <div className={styles.contai}>
@@ -53,7 +59,7 @@ const [val,setVal]=useState('All Bath & Shower');
         //   <div>{elem.img}</div>
         //   <div>{elem.img}</div> */}
         // </div>
-        <Singledata key={elem.id} {...elem}/>
+         <Singledata key={elem.id} {...elem}/>
       ))}
           </div>
     </div>

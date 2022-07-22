@@ -13,3 +13,4 @@ const rootreducer = combineReducers({
 });
 
 export const store=legacy_createStore(rootreducer,applyMiddleware(thunk))
+
