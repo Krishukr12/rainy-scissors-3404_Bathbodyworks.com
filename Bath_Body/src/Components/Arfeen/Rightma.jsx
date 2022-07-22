@@ -46,13 +46,14 @@ const [val,setVal]=useState('All Bath & Shower');
       <div style={{width:'100%', height:'100px' ,border:'1px solid red'}}></div>
       <div className={styles.mainconta}>
       {data?.map((elem)=>(
-        <div  key={elem.id}>
-          {/* <Singledata {...elem}/> */}
-          <div>{elem.name}</div>
-          {/* <div>{elem.img}</div>
-          <div>{elem.img}</div>
-          <div>{elem.img}</div> */}
-        </div>
+        // <div  key={elem.id}>
+        //   {/* <Singledata {...elem}/> */}
+        //   <div>{elem.name}</div>
+        //   {/* <div>{elem.img}</div>
+        //   <div>{elem.img}</div>
+        //   <div>{elem.img}</div> */}
+        // </div>
+        <Singledata key={elem.id} {...elem}/>
       ))}
           </div>
     </div>
