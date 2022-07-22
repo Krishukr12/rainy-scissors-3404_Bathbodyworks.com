@@ -23,7 +23,7 @@ const Customtabs = () => {
         <div className={styles.dots}></div>
       </div>
       <div className={styles.Custom_tabs}>
-        <button className={styles.Custom_tabs_image_parent}> <img src="https://www.bathandbodyworks.in/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwc8dcfc5c/images/Wallet.svg" alt=""/>  </button>
+        <button className={styles.Custom_tabs_image_parent_third}> <img src="https://www.bathandbodyworks.in/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwc8dcfc5c/images/Wallet.svg" alt=""/>  </button>
          
       </div>
 
