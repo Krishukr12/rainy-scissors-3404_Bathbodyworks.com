@@ -9,7 +9,7 @@ const ProductsCard = ({ id, img, title, name, subname, Price, type }) => {
   return (
     <div className={styles.innerDiv}>
       <img className={styles.heart} src={pic} alt="" />
-      <Link to={`/products/${id}`}>
+      <Link to={`/${id}`}>
         <img className={styles.prodImg} src={img} alt="" />
       </Link>
       <p className={styles.name}>{name}</p>
