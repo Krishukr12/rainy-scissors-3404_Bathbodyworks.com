@@ -19,6 +19,7 @@
 .Custom_tabs_main{
     display: flex;
     justify-content: center;
+    padding: 50px 0px;
 }
 .dots{
     border-radius: 50%;
@@ -36,4 +37,20 @@
 img{
     width: 24px;
     height: 24px;
+}
+.Custom_tabs_image_parent_third{
+        background-color: rgb(116, 116, 116);
+        display: flex;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+        border-radius: 50%;
+        align-items: center;
+        margin: 20px;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
 }

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&family=Lato:wght@300&family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+.grand_total{
+    border-top: 1px dashed #000000;
+        padding-top: 7px;
+        display: flex;
+        justify-content: space-between;
+}
+.bill_content{
+display: flex;
+justify-content: space-between;
+}
+.bill_content_each{
+    display: flex;
+   
+}
+.total_mrp{
+      
+            font-size: 13px;
+            line-height: 139%;
+            color: #333333;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 600;
+            letter-spacing: .5px;
+            margin-bottom: 10px;
+}
+.price_taxes{
+    font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 17px;
+        color: #6e6e6e;
+        margin:10px 0px;
+        margin-bottom:20px;
+}
+.detail{
+    font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+            font-size: 15px;
+            line-height: 19px;
+            color: #333333;
+            text-transform: uppercase;
+}
+.ckeckout_main{
+    width: 30%;
+
+}
+.total_text{
+    font-family: 'Roboto Condensed', sans-serif;   
+        font-weight: bolder;
+        font-size: 17px ;
+        line-height: 139%;
+        text-transform: uppercase;
+        color: #333333;
+}
+@media all and (min-width:50px) and (max-width:360px) {
+    .ckeckout_main {
+            width: 90%;
+            margin: auto;
+            
+    
+        }
+}
+@media all and (min-width:361px) and (max-width:720px) {
+.ckeckout_main {
+        width: 80%;
+        margin: auto;
+
+
+    }
+}

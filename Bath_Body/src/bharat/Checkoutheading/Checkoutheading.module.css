@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&family=Lato:wght@300&family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+.hr_line{
+    margin-top: 5px;
+    border: 1px solid #333333;
+    margin-bottom: 1rem;
+    height: 1px;
+                   
+}
+.heading_Text{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 600 ;
+        font-size: 27px;
+        line-height: 34px;
+        text-transform: uppercase;
+        color: #333333;
+        margin-bottom: 0 ;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+}
+.heading_main{
+    width: 76%;
+    margin: auto;
+}
