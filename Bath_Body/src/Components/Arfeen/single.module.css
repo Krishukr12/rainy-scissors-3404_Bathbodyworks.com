@@ -1,0 +1,36 @@
+.mainDiv{
+    width:230px;
+    height: 502px;
+    border: 1px solid red;
+    justify-content: center;
+    text-align: center;
+    line-height:2.5rem;
+}
+.mainDiv>img{
+    width:206px;
+    height: 306px;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
+h4{
+    color: #666666;
+    height: 40px;
+}
+.bag{
+    width:222px;
+    height: 10px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    /* padding: 2px 4px 2px 2px; */
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 2.6rem;
+    /* justify-content: center; */
+}
+.bag:hover{
+    background-color: #c2c2c2;
+    color: black;
+}

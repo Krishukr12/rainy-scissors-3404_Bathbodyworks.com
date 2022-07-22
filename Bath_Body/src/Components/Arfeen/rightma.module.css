@@ -41,16 +41,18 @@
 }
 .mainconta{
     display: grid;
-    width:1000px;
-    height: 1000px;
+    margin: auto;
+    width:1010px;
+    /* height: 1000px; */
     margin-top: 20px;
     border: 1px solid black;
     grid-template-columns: repeat(4,230px);
     grid-template-rows: auto;
+    grid-gap: 1.5rem;
     /* grid-template-rows: repeat(inherit,502px); */
 }
-.mainconta>div{
+/* .mainconta>div{
     width:230px;
-    height: 502px;
+    height: 480px;
     border: 1px solid red;
-}
+} */

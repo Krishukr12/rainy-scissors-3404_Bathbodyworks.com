@@ -16,7 +16,7 @@ export const getData_fail=()=>({
 export const getData=()=>(dispatch)=>{
   dispatch(getData_req());
   return axios({
-    url:'http://localhost:8080/Moisturizers',
+    url:'http://localhost:8080/shop_body',
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success(res.data));
@@ -28,7 +28,7 @@ export const getData=()=>(dispatch)=>{
 export const getData1=()=>(dispatch)=>{
   dispatch(getData_req());
   return axios({
-    url:'http://localhost:8080/shop_body',
+    url:'http://localhost:8080/Moisturizers',
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success(res.data));

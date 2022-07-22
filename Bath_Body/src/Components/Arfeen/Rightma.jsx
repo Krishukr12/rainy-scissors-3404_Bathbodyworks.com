@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import styles from './rightma.module.css';
 import {useDispatch, useSelector} from 'react-redux'
 import { getData, getData1, getData2, getData3 } from '../../Redux/ArfReducer/action';
-// import Singledata from './Singledata';
+import Singledata from './Singledata';
 
 const Rightma = () => {
-  const {data}=useSelector((state)=>state.arfreducer);
+  const {data}=useSelector((state)=>state.ArfReducer);
   // console.log(data);
 const [val,setVal]=useState('All Bath & Shower');
 
@@ -53,7 +53,7 @@ const [val,setVal]=useState('All Bath & Shower');
         //   <div>{elem.img}</div>
         //   <div>{elem.img}</div> */}
         // </div>
-        <Singledata key={elem.id} {...elem}/>
+         <Singledata key={elem.id} {...elem}/>
       ))}
           </div>
     </div>
