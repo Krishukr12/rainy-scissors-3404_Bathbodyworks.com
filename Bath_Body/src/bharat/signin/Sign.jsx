@@ -29,9 +29,8 @@ export const SigninCard=() =>{
 console.log(token,isAuth,isError,isLoading)
 
   const handlelogin=()=>{
-    // e.preventDefault()
-    //  dispatch(signin({email,password}))
-    dispatch(signin());
+
+    dispatch(signin({"username":email,"password":password}));
   }
 
   return (

@@ -5,7 +5,6 @@ import AllCare from "../Pages/AllCare";
 import { HomeFragnance } from "../Pages/Home Fragnance/HomeFragnance";
 import { Homepage } from "../Pages/Homepage";
 
-
 const MainRoutes = () => {
   return (
     <div>   
@@ -14,8 +13,6 @@ const MainRoutes = () => {
           <Route path='/body-care' element={<AllCare/>}/>
           <Route path='/homefragrance' element={<HomeFragnance/>}/>
           <Route path="/allcareProducts/:id" element={<SinglePage/>}></Route>
-      </Routes>
-      
     </div>
   );
 };
