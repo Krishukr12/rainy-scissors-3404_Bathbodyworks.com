@@ -1,7 +1,8 @@
-import { GET_DATA_FAIL, GET_DATA_REQUEST, GET_DATA_SUCCESS } from "./actionType"
+import { GET_DATA_FAIL, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_DATA_SUCCESS_SINGLE } from "./actionType"
 
 
 const initState={
+    single:[],
     data:[],
     isLoading:false,
     isError:false
@@ -21,6 +22,14 @@ export const ArfReducer=(state=initState,action)=>{
             ...state,
             isLoading:false,
             data:action.payload,
+            isError:false
+        }
+    }
+    case GET_DATA_SUCCESS_SINGLE:{
+        return{
+            ...state,
+            isLoading:false,
+            single:action.payload,
             isError:false
         }
     }

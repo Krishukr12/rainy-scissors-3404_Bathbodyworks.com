@@ -1,8 +1,12 @@
-import { GET_DATA_FAIL, GET_DATA_REQUEST, GET_DATA_SUCCESS } from "./actionType";
+import { GET_DATA_FAIL, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_DATA_SUCCESS_SINGLE } from "./actionType";
 import axios from 'axios'
 
 export const getData_success=(data)=>({
     type:GET_DATA_SUCCESS,
+    payload:data
+})
+export const getData_success_single=(data)=>({
+    type:GET_DATA_SUCCESS_SINGLE,
     payload:data
 })
 
@@ -20,6 +24,18 @@ export const getData=()=>(dispatch)=>{
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success(res.data));
+  }).catch((err)=>{
+    dispatch(getData_fail());
+    console.log(err);
+  })
+}
+export const getDataSingle=(id)=>(dispatch)=>{
+  dispatch(getData_req());
+  return axios({
+    url:`http://localhost:8080/newFragrance/${id}`,
+    method:'GET'
+  }).then((res)=>{
+    dispatch(getData_success_single(res.data));
   }).catch((err)=>{
     dispatch(getData_fail());
     console.log(err);

@@ -1,7 +1,7 @@
 .contai{
     width:1100px;
     padding: 0 0 25px 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .headinga{
     font-family:Arial,sans-serif;
@@ -45,7 +45,7 @@
     width:1010px;
     /* height: 1000px; */
     margin-top: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     grid-template-columns: repeat(4,230px);
     grid-template-rows: auto;
     grid-gap: 1.5rem;

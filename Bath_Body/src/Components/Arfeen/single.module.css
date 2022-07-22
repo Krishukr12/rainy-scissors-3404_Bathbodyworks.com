@@ -1,7 +1,7 @@
 .mainDiv{
     width:230px;
     height: 502px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: center;
     text-align: center;
     line-height:2.5rem;
