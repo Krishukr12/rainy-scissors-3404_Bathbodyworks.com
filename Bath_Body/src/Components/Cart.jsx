@@ -12,7 +12,7 @@ const Cart = () => {
   let Navigate =useNavigate();
   const { cartProducts, totalPrice } = useSelector((state) => state);
   const dispatch = useDispatch();
-
+   
   useEffect(() => {
     getCartData(dispatch);
   }, [dispatch]);

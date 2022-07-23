@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { Dropdown } from "./DropdownMenu";
 import CATEGORY from "../data/homepage.json";
 import data from "../Fresh.json";
 import ProductsCard from "./ProductsCard";
+import { logout } from "../Redux/Authreducer/actions";
 export const Navbar = () => {
   let Data = CATEGORY.searchData;
-
+  const {token}=useSelector(state=>state.AuthReducer)
+const dispatch=useDispatch()
   let freshData = data;
 
   const [searchToggle, setToogle] = useState(true);
@@ -55,18 +57,35 @@ export const Navbar = () => {
               />
             </div>
             <div>
-              <div className={styles.hover}>
+              {
+                token?  <div className={styles.hover} onClick={()=>dispatch(logout())}>
                 <img
                   src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwc807e833/images/svg-icons/UI-MyAccount.svg?yocs=o_s_"
                   alt=""
                 />
-                <div className={styles.hoverDiv}>
-                  <Link to={"/Profile"}>Sign In or Sign Up</Link>
+                      Logout
+                {/* <div className={styles.hoverDiv}>
                   <Link to={"/Profile"}>Order Tracking</Link>
+                <Link to={"/Profile"}>My Auto Refresh</Link>
+                <Link to={"/Profile"}>My Love-It List</Link>
+                </div> */}
+              </div>:
+             
+              <Link to={"/login"}>
+                <div className={styles.hover}>
+                  <img
+                    src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwc807e833/images/svg-icons/UI-MyAccount.svg?yocs=o_s_"
+                    alt=""
+                  /> Login
+
+                  <div className={styles.hoverDiv}>
+                    {/* <Link to={"/Profile"}>Order Tracking</Link>
                   <Link to={"/Profile"}>My Auto Refresh</Link>
-                  <Link to={"/Profile"}>My Love-It List</Link>
+                  <Link to={"/Profile"}>My Love-It List</Link> */}
+                  </div>
                 </div>
-              </div>
+              </Link>
+               }
               <Link to="/cart">
                 <div className={styles.cart}>{cartProducts}</div>
               </Link>
