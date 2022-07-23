@@ -3,17 +3,17 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { Dropdown } from "./DropdownMenu";
-import CATEGORY from "../data/homepage.json"
-import data from "../Fresh.json"
+import CATEGORY from "../data/homepage.json";
+import data from "../Fresh.json";
 import ProductsCard from "./ProductsCard";
 export const Navbar = () => {
-  let Data= CATEGORY.searchData
+  let Data = CATEGORY.searchData;
 
-  let freshData=data;
-  console.log(freshData)
+  let freshData = data;
+
   const [searchToggle, setToogle] = useState(true);
-  const {cartProducts} = useSelector((state) => state);
- let Navigate = useNavigate();
+  const { cartProducts } = useSelector((state) => state);
+  let Navigate = useNavigate();
   return (
     <div className={styles.navbar}>
       <div className={styles.adDiv}>
@@ -33,11 +33,11 @@ export const Navbar = () => {
           />
           <h5>PICK UP IN STORE</h5>
           <Link to={"/"}>Set Store</Link>
-          
         </div>
       </div>
       <div className={styles.logoNameDiv}>
-        <img onClick={()=> Navigate('/')}
+        <img
+          onClick={() => Navigate("/")}
           src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dwf1f0e62b/images/svg-icons/Logos-main.svg?yocs=o_s_"
           alt=""
         />
@@ -68,9 +68,8 @@ export const Navbar = () => {
                 </div>
               </div>
               <Link to="/cart">
-              <div className={styles.cart}>{cartProducts.length}</div>
+                <div className={styles.cart}>{cartProducts}</div>
               </Link>
-            
             </div>
           </div>
         ) : (
@@ -93,29 +92,35 @@ export const Navbar = () => {
       ) : (
         <div className={styles.downDiv}>
           <div className={styles.product}>
-          
-            {
-              freshData.map((el,i)=>{
-               if(i<4){
-               return <div>< ProductsCard key={i} {...el}/></div>}
-               else{
-                 return<></>;
-               }
-              })
-            }
+            {freshData.map((el, i) => {
+              if (i < 4) {
+                return (
+                  <div>
+                    <ProductsCard key={i} {...el} />
+                  </div>
+                );
+              } else {
+                return <></>;
+              }
+            })}
           </div>
           <div className={styles.Shistory}>
-            <h4>   POPULAR SEARCHES</h4>
-            {Data.map((el,i)=>{
-              return <div key={i}>
-                 <img  src="https://cdn-icons-png.flaticon.com/512/7381/7381400.png" alt="" />
-                 <div>{el}</div>
-                        </div>
+            <h4> POPULAR SEARCHES</h4>
+            {Data.map((el, i) => {
+              return (
+                <div key={i}>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/7381/7381400.png"
+                    alt=""
+                  />
+                  <div>{el}</div>
+                </div>
+              );
             })}
           </div>
         </div>
       )}
-      <Dropdown/>
+      <Dropdown />
     </div>
   );
 };
