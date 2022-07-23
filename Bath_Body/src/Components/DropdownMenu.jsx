@@ -16,7 +16,7 @@ export const Dropdown = () => {
                  onMouseOver={() => setsublist(el.list[0].sublist)}
                  onMouseOut={() => setsublist([])}
               >
-                {el.title}
+                <Link to={el.path}>{el.title}</Link>
               </p>
               <div className={styles.mainHovar}>
                 <div>

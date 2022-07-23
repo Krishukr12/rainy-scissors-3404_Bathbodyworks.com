@@ -1,7 +1,8 @@
 {
     "Title": [
         {
-            "title": "TOP OFFERS",
+            "title": "HOME",
+            "path":"",
             "list": [
               {
                 "listTitle": "",
@@ -12,6 +13,7 @@
           },
         {
         "title": "BODY CARE",
+        "path":"body-care",
         "list": [{
              "listTitle": "FEATURED",
              "sublist": ["New Body Care", "Retired Fragrances", "Travel Size"]
@@ -72,6 +74,7 @@
           }, 
           {
             "title": "CANDLES",
+            "path":"candle",
             "list": [
               {
                 "listTitle": "",
@@ -82,6 +85,7 @@
           },
           {
             "title": "HOME FRAGRANCE",
+            "path":"homefragrance",
             "list": [
               {
                 "listTitle": "",
@@ -92,6 +96,7 @@
           },
       {
         "title": "MEN'S",
+        "path":"body-care",
         "list": [{
             "listTitle": "THE MEN'S SHOP",
             "sublist": [
@@ -111,6 +116,7 @@
       },
       {
         "title": "NEW & NOW",
+        "path":"candle",
         "list": [{
             "listTitle": "NEW & NOW",
             "sublist": [
@@ -130,6 +136,7 @@
       },
       {
         "title": "HAND SOAPS & SANITIZERS ",
+        "path":"handsoap",
         "list": [{
             "listTitle": "NEW & NOW",
             "sublist": [
@@ -153,6 +160,7 @@
       },
       {
         "title": "GIFTS",
+        "path":"body-care",
         "list": [{
             "listTitle": "NEW & NOW",
             "sublist": [
