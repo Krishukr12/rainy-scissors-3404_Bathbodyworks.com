@@ -8,6 +8,7 @@ import { HomeFragnance } from "../Pages/Home Fragnance/HomeFragnance";
 import  {Homepage}  from "../Pages/Homepage";
 import Candle from "../Pages/Candle";
 import HandSoap from "../Pages/HandSoap";
+import PageNotFound from "../Components/Arfeen/PageNotFound";
 
 const MainRoutes = () => {
   return (
@@ -21,6 +22,10 @@ const MainRoutes = () => {
           <Route path='/handsoap' element={<HandSoap/>}/>
           <Route path='/homefragrance' element={<HomeFragnance/>}/>
           <Route path="/allcareProducts/:id" element={<SinglePage/>}/>
+
+
+          {/* page not found */}
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer/>
     </div>
