@@ -67,7 +67,7 @@ export const Navbar = () => {
                   <Link to={"/Profile"}>My Love-It List</Link>
                 </div>
               </div>
-              <Link to="/Products/cart">
+              <Link to="/cart">
               <div className={styles.cart}>{cartProducts.length}</div>
               </Link>
             
@@ -115,7 +115,7 @@ export const Navbar = () => {
           </div>
         </div>
       )}
-      <Dropdown />
+      <Dropdown/>
     </div>
   );
 };

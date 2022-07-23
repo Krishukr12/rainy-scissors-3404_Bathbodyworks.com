@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./AddtoCart.module.css";
 import AddtoCart from "./AddtoCart";
 import { useDispatch, useSelector } from "react-redux";
-import { getCartData } from "../redux/action";
+import { getCartData } from "../Redux/souReducer/action";
 import { useEffect } from "react";
 import pic from "./img2.png";
 import { Link, useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
-  let Nagigate =useNavigate();
+  let Navigate =useNavigate();
   const { cartProducts, totalPrice } = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -19,13 +19,15 @@ const Cart = () => {
 
   return (
     <>
-    {cartProducts.length === 0 ? (
+    {
+      cartProducts.length === 0 ? (
       <div style={{textAlign:"center",marginBottom:"20px"}} >
-       
+      <br/>
+      <img className={styles.empCart} src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="" />    
       <p>Please Add some Products To Show Here</p>
-      <img  src="https://sethisbakery.com/assets/website/images/empty-cart.png" alt="" />    
       </div>
-    ):(<>
+    ):
+    (<>
 <img className={styles.headerpic} src={pic} alt="" />
       <div className={styles.blue}>
         <p style={{ color: "white" }}>
@@ -87,8 +89,8 @@ const Cart = () => {
             <p style={{fontWeight: "bold",fontSize:"20px"}}>ORDER TOTAL</p>
             <p style={{ marginLeft: "135px",fontWeight: "bold",fontSize:"20px" }}>${totalPrice}</p>
           </div>
-          <Link to="/Products/cart/checkout">
-          <button onClick={()=>Nagigate("/Products/cart/checkout")} className={styles.checkOut}>CONTINUE CHECKOUT</button>
+          <Link to="/cart/checkout">
+          <button onClick={()=>Navigate("/cart/checkout")} className={styles.checkOut}>CONTINUE CHECKOUT</button>
           </Link>
         </div>
       </div>
