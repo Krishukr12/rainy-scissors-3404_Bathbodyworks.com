@@ -13,6 +13,7 @@ import  {Homepage}  from "../Pages/Homepage";
 import Candle from "../Pages/Candle";
 import HandSoap from "../Pages/HandSoap";
 import PageNotFound from "../Components/Arfeen/PageNotFound";
+import Cart from "../Components/Cart";
 
 const MainRoutes = () => {
   return (
@@ -27,7 +28,9 @@ const MainRoutes = () => {
           <Route path='/homefragrance' element={<HomeFragnance/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="/checkout" element={<RequiredAuth>
+            
           <Checkout/>
           </RequiredAuth>}/>
           <Route path="/allcareProducts/:id" element={<SinglePage/>}/>

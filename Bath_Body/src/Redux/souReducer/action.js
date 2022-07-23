@@ -7,22 +7,10 @@ export const Delete_DATA = "Delete_DATA";
 export const EDIT_DATA = "EDIT_DATA";
 export const ADD_CART = "Add_CART"
 
-export const getProductsData = (dispatch) => {
-  dispatch(requestData());
-  axios
-    .get("http://localhost:8080/candle")
-    .then((res) =>
-      dispatch({
-        type: GET_DATA,
-        payload: res.data,
-      })
-    )
-    .catch((err) => dispatch(errorData(err.message)));
-};
 
-export const getCartData = (dispatch) => {
+export const getCartData =()=> (dispatch) => {
   dispatch(requestData());
-  axios
+  return axios
     .get("http://localhost:8080/cart")
     .then((res) =>
       dispatch({
@@ -34,6 +22,7 @@ export const getCartData = (dispatch) => {
 };
 
 export const addProducts = async (dispatch,img, name, subname, Price,type) => {
+  console.log(img,name);
   let r = await fetch("http://localhost:8080/cart", {
     method: "POST",
     headers: { "content-type": "application/json" },
@@ -68,7 +57,7 @@ export const editData = async (dispatch,value,id) => {
   dispatch({
     type: EDIT_DATA,
     payload: data,
-    
+
   })
 };
 

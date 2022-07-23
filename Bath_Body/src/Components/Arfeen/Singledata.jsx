@@ -3,11 +3,26 @@ import React from 'react'
 import styles from './single.module.css'
 import {StarIcon} from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addtocart } from '../../Redux/CartReducer/action'
+
 
 const Singledata = (item) => {
-  const {isLoading}=useSelector((state)=>state.ArfReducer)
-    // console.log(item);
+  const {isLoading}=useSelector((state)=>state.ArfReducer);
+  const dispatch =useDispatch();
+
+  
+  const handleClick = (item) => {
+    console.log(item);
+   
+    addtocart({
+      item,
+      dispatch,
+    });
+  };
+  // const handleCLick=(e)=>{
+  //    addProducts(dispatch,e.img,e.name,e.subname,e.Price,e.type,e.ratings);
+  // };    // console.log(item);
   return (
     <>
       {isLoading?<CircularProgress isIndeterminate color='green.300' />:''}
@@ -24,7 +39,7 @@ const Singledata = (item) => {
       </div>
       </div>
      </Link>
-      <button className={styles.bag}>ADD TO BAG</button>
+      <button onClick={()=>handleClick(item)} className={styles.bag}>ADD TO BAG</button>
     </div>
     </>
   )
