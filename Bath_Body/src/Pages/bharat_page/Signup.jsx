@@ -10,7 +10,8 @@ import {
   Stack
 } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
-import { signup } from '../Redux/Authreducer/actions';
+import { signup } from '../../Redux/Authreducer/actions';
+import {useNavigate} from "react-router-dom"
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,13 +21,13 @@ const Signup = () => {
   const [password, setpassword] = useState('')
   const [username, setusername] = useState('')
   const [mobile, setmobile] = useState(0)
-  const [description, setdescription] = useState(0)
+  const [description, setdescription] = useState("")
   const dispatch=useDispatch()
-
+  const navigate=useNavigate()
 const handlesignup=()=>{
 
-  dispatch(signup({"name":firstname+" "+lastname,"email":email,"username":username,"mobile":mobile,"password":password,"description":description}))
-
+  dispatch(signup({"name":firstname+" "+lastname,"email":email,"password":password,"username":username,"mobile":mobile,"description":description}))
+  navigate("/login")
 }
 
   return (
@@ -43,7 +44,7 @@ const handlesignup=()=>{
        <Stack spacing={4}>
 
             <FormControl id="firstName" isRequired>
-                  <FormLabel className={styles.input_name}>First Name</FormLabel>
+                  <FormLabel className={styles.input_name} >First Name</FormLabel>
                   <Input type="text" value={firstname} onChange={(e)=>setfirstname(e.target.value)}/>
                 </FormControl>
                 <FormControl id="LasttName" isRequired>

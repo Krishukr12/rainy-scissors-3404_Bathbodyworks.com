@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./SingelItem.module.css";
-import { Link } from "react-router-dom";
 export const SingleItem = ({ data }) => {
   return (
     <>

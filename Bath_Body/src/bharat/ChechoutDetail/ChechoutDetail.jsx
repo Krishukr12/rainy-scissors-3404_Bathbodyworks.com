@@ -1,5 +1,6 @@
 import { Button, Stack } from '@chakra-ui/react'
 import React from 'react'
+import { BasicUsage, OrderPlacedButton } from '../Order_place_buttion/Order_place_buttion'
 import styles from "./ChechoutDetail.module.css"
 const ChechoutDetail = () => {
   return (
@@ -20,28 +21,7 @@ const ChechoutDetail = () => {
         <div className={styles.total_text}>ORDER TOTAL</div>
         <div className={styles.total_text}>₹2,698.00</div>
       </div>
-       <Stack spacing={10} pt={2}>
-              <Button
-                loadingText="Submitting"
-                size="md"
-                width="100%"
-                margin={'auto'}
-                bg={'black'}
-                color={'white'}
-                marginTop="20px"
-                _hover={{
-                  bg: 'white',
-                  color:'black',
-                  border:'0.5px solid black'
-                  
-                }}
-               
-                
-                >
-                CONFIRM SHIPPING ADDRESS
-              </Button>
-              
-            </Stack>
+            <BasicUsage/>
     </div>
   )
 }
