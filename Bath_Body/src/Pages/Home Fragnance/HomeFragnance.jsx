@@ -79,8 +79,8 @@ export const HomeFragnance = () => {
               onChange={(e) => getData2(dispatch, e.target.value)}
             >
               <option>SORT BY</option>
-              <option value="asc">Price High to low</option>
-              <option value="desc">Price Low to high</option>
+              <option value="asc">Price Low to High</option>
+              <option value="desc">Price High to Low</option>
             </select>
           </div>
         </div>
