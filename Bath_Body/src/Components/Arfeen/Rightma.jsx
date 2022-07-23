@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import styles from './rightma.module.css';
+import classes from '../../Pages/Home Fragnance/HomeFragnance.module.css'
 import {useDispatch, useSelector} from 'react-redux'
-import { getData, getData1, getData2, getData3 } from '../../Redux/ArfReducer/action';
+import { getData, getData1, getData2, getData2candle, getData2fragrance, getData2moisturizers, getData2soap, getData3 } from '../../Redux/ArfReducer/action';
 import Singledata from './Singledata';
 import {useSearchParams} from 'react-router-dom'
 
@@ -34,6 +35,19 @@ const Rightma = () => {
     setVal(e.target.value);
     setCategoryValue(e.target.value);
   }
+  const handleSort=(e)=>{
+    if(val==='All Bath & Shower'||val==='All Body Care'){
+      getData2soap(dispatch, e.target.value);
+    }else if(val==='All Fragrance'){
+      getData2fragrance(dispatch, e.target.value);
+    }else if(val==='All Aromatherapy Body Care'){
+      getData2candle(dispatch, e.target.value);
+    }
+    else{
+      getData2moisturizers(dispatch, e.target.value);
+  
+    }
+  }
   return (
     <div className={styles.contai}>
       <h1 className={styles.headinga}>{val}</h1>
@@ -43,13 +57,35 @@ const Rightma = () => {
 
       <button className={styles.bttn} value='All Body Care' onClick={(e)=>handleChange(e)}>ALL BODY CARE</button>
 
-
+      
       <button className={styles.bttn} value='All Fragrance' onClick={(e)=>handleChange(e)}>FRAGRANCE</button>
       <button className={styles.bttn} value='All Bath & Shower' onClick={(e)=>handleChange(e)}>BATH & SHOWER</button>
       <button className={styles.bttn} value='All Skin & Body Moisturizers' onClick={(e)=>handleChange(e)}>MOISTURIZERS</button>
       <button className={styles.bttn} value='All Aromatherapy Body Care' onClick={(e)=>handleChange(e)}>AROMATHERAPY</button>
       </div>
-      <div style={{width:'100%', height:'100px' ,border:'1px solid red'}}></div>
+      <div className={classes.filter_sort_contaier}>
+          <div className={classes.filter_div}>
+            <h1 className={classes.filter_h1}>Filter By :</h1>
+            <select className={classes.filter_select}>
+              <option>Product Type</option>
+            </select>
+            <select className={classes.filter_select}>
+              <option>Fragnance Name</option>
+            </select>
+            <select className={classes.filter_select}>
+              <option>Fragnance Category</option>
+            </select>
+          </div>
+          <div className={classes.sort_div}>
+            <select
+              className={classes.sort_select}
+              onChange={(e) => handleSort(e)}>
+              <option>SORT BY</option>
+              <option value="asc">Price Low to high</option>
+              <option value="desc">Price High to low</option>
+            </select>
+          </div>
+        </div>
       <div className={styles.mainconta}>
       {data?.map((elem)=>(
         // <div  key={elem.id}>

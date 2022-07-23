@@ -1,12 +1,17 @@
-import { Heading } from '@chakra-ui/react'
+import { Box, CircularProgress, Heading } from '@chakra-ui/react'
 import React from 'react'
 import styles from './single.module.css'
 import {StarIcon} from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Singledata = (item) => {
+  const {isLoading}=useSelector((state)=>state.ArfReducer)
     // console.log(item);
   return (
+    <>
+      {isLoading?<CircularProgress isIndeterminate color='green.300' />:''}
+    <div className={styles.maind}>
     <Link to={`/allcareProducts/${item.id}`}>
      <div className={styles.mainDiv}>
       <img src={item.img} alt="" />
@@ -17,9 +22,11 @@ const Singledata = (item) => {
       <h3>{item.ratings}</h3>
       <StarIcon mt='0.7rem'/>
       </div>
-      <button className={styles.bag}>ADD TO BAG</button>
       </div>
-    </Link>
+     </Link>
+      <button className={styles.bag}>ADD TO BAG</button>
+    </div>
+    </>
   )
 }
 
