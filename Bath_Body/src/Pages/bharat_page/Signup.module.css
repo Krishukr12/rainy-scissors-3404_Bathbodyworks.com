@@ -3,6 +3,7 @@
 .img_large_scr {
     margin: auto;
     width: 65%;
+    margin-top: 75px;
 }
 
 .title_main {
@@ -25,6 +26,7 @@
 .Signup_form_main{
     width: 25%;
     margin: auto;
+    margin-bottom: 50px;
 }
 .input_name{
     margin: 10px 0px;

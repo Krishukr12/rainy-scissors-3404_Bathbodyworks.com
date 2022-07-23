@@ -1,7 +1,7 @@
 import React from 'react'
-import AskforsSignup from '../bharat/AskforsSignup/AskforsSignup'
-import Or_Div from '../bharat/OR_div/Or_div'
-import { SigninCard } from '../bharat/signin/Sign'
+import AskforsSignup from '../../bharat/AskforsSignup/AskforsSignup'
+import Or_Div from '../../bharat/OR_div/Or_div'
+import { SigninCard } from '../../bharat/signin/Sign'
 import styles from "./Login.module.css"
 
 const Login = () => {
