@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styles from "./AddtoCart.module.css";
-import { deleteProd } from "../redux/action";
-import { editData } from "../redux/action";
+import { deleteProd } from "../redux/souReducer/action";
+import { editData } from "../redux/souReducer/action";
 
 const AddtoCart = ({ img, name, subname, type, Price, id, quantity }) => {
   const [cost, setCost] = useState(quantity * Price);

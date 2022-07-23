@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "../css/navbar.module.css";
+import styles from "./navbar.module.css";
 import { Dropdown } from "./DropdownMenu";
 import CATEGORY from "../data/homepage.json"
 import data from "../Fresh.json"
@@ -19,7 +19,8 @@ export const Navbar = () => {
       <div className={styles.adDiv}>
         <div>
           <p>Limited time only! </p>
-          <h3>$40 SPRING GIFT BUNDLE WITH $40 ORDER</h3>
+          <h3>FREE SHIPPING ON $50 ORDER</h3>
+          <h4>Code:WALK</h4>
           <Link to={"/"}>DETAILS</Link>
         </div>
       </div>

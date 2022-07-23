@@ -19,7 +19,7 @@ export const Homepage = () => {
     <div className={styles.homepage}>
       <div className={styles.offerImg}>
         <img
-          src="https://www.bathandbodyworks.in/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwa151bb00/ffm_IFD_mgh-1%20%282%29.jpg"
+          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw75f33d97/images/Summer2022/13503W_su3_hm_0.gif?yocs=s_"
           alt=""
         />
       </div>
@@ -28,7 +28,7 @@ export const Homepage = () => {
 
       <div className={styles.offerImg}>
         <img
-          src="https://www.bathandbodyworks.in/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwfbc5f05a/fbc_purewonder_spr2_hm-2%20%281%29.jpg"
+          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dwfd31720e/images/Summer2022/xcat_halloween_su3_hb.jpg?yocs=s_"
           alt=""
         />
       </div>
@@ -53,14 +53,14 @@ export const Homepage = () => {
       </div>
       <div className={styles.offerImg}>
         <img
-          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw8a216658/images/Spring2022/iso-pwp_sp3_hm_lto.jpg?yocs=s_"
+          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw2b9cc9ac/images/Summer2022/fbc_fall-preview_su3_hm.gif?yocs=s_"
           alt=""
         />
       </div>
       <br />
       <div className={styles.offerImg}>
         <img
-          src=" https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw724a089f/images/Summer2022/xcat_give-love_su1_hb.jpg?yocs=s_"
+          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw2874cfd1/images/Summer2022/xcat_mens-shop_su1_hb.jpg?yocs=s_"
           alt=""
         />
       </div>
