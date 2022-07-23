@@ -36,5 +36,6 @@ export const signup=(data)=>(dispatch)=>{
 }
 
 export const logout=()=>(dispatch)=>{
+  console.log("logout_action")
   dispatch({type:LOGOUT})
 }
