@@ -2,14 +2,14 @@ import React from 'react'
 import { useEffect } from 'react';
 import styles from './rightma.module.css';
 import {useDispatch, useSelector} from 'react-redux'
-import { getData3 } from '../../Redux/ArfReducer/action';
+import { getData2 } from '../../Redux/ArfReducer/action';
 import Singledata from './Singledata';
 
 const CandleRight = () => {
   const {data}=useSelector((state)=>state.ArfReducer);
   const dispatch=useDispatch();
   useEffect(()=>{
-      dispatch(getData3());
+      dispatch(getData2());
   },[dispatch])
 
   return (
