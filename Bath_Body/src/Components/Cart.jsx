@@ -91,8 +91,8 @@ const Cart = () => {
             <p style={{fontWeight: "bold",fontSize:"20px"}}>ORDER TOTAL</p>
             <p style={{ marginLeft: "135px",fontWeight: "bold",fontSize:"20px" }}></p>
           </div>
-          <Link to="/cart/checkout">
-          <button onClick={()=>Navigate("/cart/checkout")} className={styles.checkOut}>CONTINUE CHECKOUT</button>
+          <Link to="/checkout">
+          <button  className={styles.checkOut}>CONTINUE CHECKOUT</button>
           </Link>
         </div>
       </div>

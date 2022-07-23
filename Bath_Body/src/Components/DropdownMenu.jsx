@@ -7,7 +7,7 @@ export const Dropdown = () => {
   let data = Title.Title;
   const [sublist, setsublist] = useState([]);
   return (
-    <div className={styles.mainDiv}>
+    <div style={{width:'0%'}} className={styles.mainDiv}>
       <div>
         {data.map((el, i) => {
           return (

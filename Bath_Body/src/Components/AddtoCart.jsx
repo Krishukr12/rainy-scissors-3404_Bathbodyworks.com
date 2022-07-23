@@ -1,20 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./AddtoCart.module.css";
 import { deleteProd } from "../Redux/souReducer/action";
 // import { editData } from "../Redux/souReducer/action";
 import { deleteitem, getCart } from "../Redux/CartReducer/action";
+import { useRef } from "react";
 
 const AddtoCart = ({ img, name, subname, totalPrice, id,  }) => {
   const [cost, setCost] = useState( totalPrice);
+  // const varr=useRef(0);
+ 
   const dispatch = useDispatch();
 
   const handleInput = (e) => {
     let TotalPrice = e.target.value * totalPrice;
-    setCost(TotalPrice);
+
+    setCost(cost+TotalPrice);
+    // varr.current=cost;
     // editData(dispatch, e.target.value, id);
   };
-
+  // console.log(cost);
+// console.log(varr.current);
   const handleremove = (id) => {
     console.log(id);
     // deleteitem(dispatch,id).then(()=>{getCart(dispatch)});

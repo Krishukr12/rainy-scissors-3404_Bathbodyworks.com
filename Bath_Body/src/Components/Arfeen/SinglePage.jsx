@@ -22,6 +22,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { getDataSingle } from '../../Redux/ArfReducer/action';
+import { addtocart } from '../../Redux/CartReducer/action';
   
   export default function SinglePage() {
     const {single}=useSelector((state)=>state.ArfReducer)
@@ -35,6 +36,15 @@ console.log(searchParams);
        dispatch(getDataSingle(id));
     },[])
    console.log(single);
+
+   const handleClick = (item) => {
+    console.log(item);
+   
+    addtocart({
+      item,
+      dispatch,
+    });
+  };
     return (
       <Container maxW={'7xl'}>
         <SimpleGrid
@@ -169,6 +179,7 @@ console.log(searchParams);
             </Stack>
   
             <Button
+            onClick={()=>handleClick(single)}
               rounded={'none'}
               w={'full'}
               mt={8}
