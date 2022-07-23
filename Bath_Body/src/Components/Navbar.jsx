@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "../css/Navbar.module.css";
-import { Dropdown } from "./dropDown";
+import styles from "./navbar.module.css";
+import { Dropdown } from "./DropdownMenu";
 import CATEGORY from "../data/homepage.json"
-import data from "../data/navbarData.json"
+import data from "../Fresh.json"
 import ProductsCard from "./ProductsCard";
 export const Navbar = () => {
   let Data= CATEGORY.searchData
@@ -19,8 +19,8 @@ export const Navbar = () => {
       <div className={styles.adDiv}>
         <div>
           <p>Limited time only! </p>
-          <h2>SPRING GIFT BUNDLE WITH $50 ORDER</h2>
-          <h5>Code:WALK</h5>
+          <h3>FREE SHIPPING ON $50 ORDER</h3>
+          <h4>Code:WALK</h4>
           <Link to={"/"}>DETAILS</Link>
         </div>
       </div>
@@ -61,14 +61,14 @@ export const Navbar = () => {
                   alt=""
                 />
                 <div className={styles.hoverDiv}>
-                  <Link to={""}>Sign In or Sign Up</Link>
-                  <Link to={""}>Order Tracking</Link>
-                  <Link to={""}>My Auto Refresh</Link>
-                  <Link to={""}>My Love-It List</Link>
+                  <Link to={"/Profile"}>Sign In or Sign Up</Link>
+                  <Link to={"/Profile"}>Order Tracking</Link>
+                  <Link to={"/Profile"}>My Auto Refresh</Link>
+                  <Link to={"/Profile"}>My Love-It List</Link>
                 </div>
               </div>
-              <Link to="">
-              <div className={styles.cart}>{cartProducts}</div>
+              <Link to="/cart">
+              <div className={styles.cart}>{cartProducts.length}</div>
               </Link>
             
             </div>
@@ -105,7 +105,7 @@ export const Navbar = () => {
             }
           </div>
           <div className={styles.Shistory}>
-            <h4>  POPULAR SEARCHES</h4>
+            <h4>   POPULAR SEARCHES</h4>
             {Data.map((el,i)=>{
               return <div key={i}>
                  <img  src="https://cdn-icons-png.flaticon.com/512/7381/7381400.png" alt="" />
@@ -115,7 +115,7 @@ export const Navbar = () => {
           </div>
         </div>
       )}
-      <Dropdown />
+      <Dropdown/>
     </div>
   );
 };

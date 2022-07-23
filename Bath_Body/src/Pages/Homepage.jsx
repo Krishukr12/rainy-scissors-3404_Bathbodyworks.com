@@ -4,12 +4,12 @@ import "../css/slider.css";
 import styles from "../css/homepage.module.css";
 import { Link } from "react-router-dom";
 import CATEGORY from "../data/homepage.json";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-
 export const Homepage = () => {
   let data = CATEGORY.CATEGORY;
   let Data = CATEGORY.flexData;
@@ -60,7 +60,7 @@ export const Homepage = () => {
       <br />
       <div className={styles.offerImg}>
         <img
-          src=" https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw724a089f/images/Summer2022/xcat_give-love_su1_hb.jpg?yocs=s_"
+          src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.216/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw2874cfd1/images/Summer2022/xcat_mens-shop_su1_hb.jpg?yocs=s_"
           alt=""
         />
       </div>
