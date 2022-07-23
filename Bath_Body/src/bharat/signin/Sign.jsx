@@ -11,7 +11,7 @@ import {
 
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import styles from "./login.module.css"
+import styles from "./sign.module.css"
 import {FaFacebookF} from 'react-icons/fa'
 import {FcGoogle} from 'react-icons/fc'
 import AskforsSignup from '../AskforsSignup/AskforsSignup';
@@ -19,19 +19,22 @@ import OrDiv from '../OR_div/Or_div';
 import { signin } from '../../Redux/Authreducer/actions';
 import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../Redux/ArfReducer/action';
+import {useLocation, useNavigate} from "react-router-dom"
+import { LOGIN_SUCCESS } from '../../Redux/Authreducer/actiontypes';
 
 export const SigninCard=() =>{
   const [showPassword, setShowPassword] = useState(false);
   const {token,isAuth,isError,isLoading}=useSelector(state=>state.AuthReducer)
   const [password, setpassword] = useState("")
   const [email, setemail] = useState("")
+    const location = useLocation();
+  const previousPath = location.state?.from?.pathname || "/";
   const dispatch=useDispatch()
-console.log(token,isAuth,isError,isLoading)
+  const navigate=useNavigate()
 
   const handlelogin=()=>{
-    // e.preventDefault()
-    //  dispatch(signin({email,password}))
-    dispatch(signin());
+    dispatch(signin({"username":email,"password":password}))
+         navigate(previousPath, { replace: true })
   }
 
   return (
@@ -57,11 +60,11 @@ console.log(token,isAuth,isError,isLoading)
           <Stack spacing={4}>
 
             <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
+              <FormLabel fontWeight={"400"}>Email address</FormLabel>
               <Input type="email" value={email} onChange={(e)=>setemail(e.target.value)}/>
             </FormControl>
             <FormControl id="password" isRequired >
-              <FormLabel>Password</FormLabel>
+              <FormLabel fontWeight={"400"}>Password</FormLabel>
               <InputGroup >
                 <Input type={showPassword ? 'text' : 'password'} value={password} onChange={(e)=>setpassword(e.target.value)}/>
                 <InputRightElement h={'full'}>

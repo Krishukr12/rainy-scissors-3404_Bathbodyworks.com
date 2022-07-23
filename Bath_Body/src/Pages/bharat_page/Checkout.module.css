@@ -1,0 +1,31 @@
+.checkout_body{
+    display: flex;
+    justify-content: center; 
+    gap:70px;
+margin-bottom: 300px;
+padding-bottom: 50px;
+}
+.line {
+    position: absolute;
+    left: 55%;
+    top: 25px;
+    bottom: 0;
+    width: 0.05px;
+    background: #ccc;
+    z-index: 1;
+    margin-top: 420px;
+    height: 620px;
+}
+.body{
+    background-color:rgb(249, 249, 249);
+}
+
+@media all and (min-width:50px) and (max-width:720px) {
+.checkout_body {
+   display: block;
+   margin: auto;
+    }
+    .line{
+        display: none;
+    }
+}
