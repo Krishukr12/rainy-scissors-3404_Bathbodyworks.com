@@ -1,7 +1,8 @@
 {
   "Title": [
       {
-          "title": "TOP OFFERS",
+          "title": "HOME",
+          "path":"",
           "list": [
             {
               "listTitle": "",
@@ -12,6 +13,7 @@
         },
       {
       "title": "BODY CARE",
+      "path":"body-care",
       "list": [{
            "listTitle": "FEATURED",
            "sublist": ["New Body Care", "Retired Fragrances", "Travel Size"]
@@ -70,68 +72,31 @@
             "Buy 2, Get 1 Free Travel, Hand & Lip Care"
           ]
         }, 
-      {
-      "title": "BODY CARE",
-      "list": [{
-          "listTitle": "FEATURED",
-          "sublist": ["New Body Care", "Retired Fragrances", "Travel Size"]
+        {
+          "title": "CANDLES",
+          "path":"candle",
+          "list": [
+            {
+              "listTitle": "",
+              "sublist": []
+            }
+          ],
+          "staticData": []
         },
         {
-          "listTitle": "BATH & SHOWER",
-          "sublist": [
-            "All Bath & Shower",
-            "Body Wash & Shower Gel",
-            "Bubble Bath",
-            "Bar Soap",
-            "Bath Accessories"
-          ]
+          "title": "HOME FRAGRANCE",
+          "path":"homefragrance",
+          "list": [
+            {
+              "listTitle": "",
+              "sublist": []
+            }
+          ],
+          "staticData": []
         },
-        {
-          "listTitle": "MOISTURIZERS",
-          "sublist": [
-            " All Moisturizers",
-            "Body Lotion",
-            "Body Cream",
-            "Hand Cream",
-            "Lip Gloss & Balms"
-          ]
-        }, {
-          "listTitle": "FRAGRANCE",
-          "sublist": [
-
-            "All Fragrance",
-            "Body Sprays & Mists",
-            "Perfume & Cologne"
-
-          ]
-        }, {
-          "listTitle": "AROMATHERAPY",
-          "sublist": [
-            "All Aromatherapy",
-            "Body Wash & Shower Gel",
-            "Moisturizers",
-            "Mists & Sprays"
-          ]
-        },
-        {
-          "listTitle": "GIFT SETS",
-          "sublist": [
-            "Body Care Gift Set"
-          ]
-        },
-        {
-          "listTitle": "EXPLORE BODY CARE",
-          "sublist": []
-        }
-      ],
-      "staticData": [
-        "BODY CARE OFFERS",
-        "Buy 3, Get 3 Free All Full-Size Body Care",
-        "Buy 2, Get 1 Free Travel, Hand & Lip Care"
-      ]
-    },
     {
       "title": "MEN'S",
+      "path":"body-care",
       "list": [{
           "listTitle": "THE MEN'S SHOP",
           "sublist": [
@@ -151,6 +116,7 @@
     },
     {
       "title": "NEW & NOW",
+      "path":"candle",
       "list": [{
           "listTitle": "NEW & NOW",
           "sublist": [
@@ -170,6 +136,7 @@
     },
     {
       "title": "HAND SOAPS & SANITIZERS ",
+      "path":"handsoap",
       "list": [{
           "listTitle": "NEW & NOW",
           "sublist": [
@@ -193,6 +160,7 @@
     },
     {
       "title": "GIFTS",
+      "path":"body-care",
       "list": [{
           "listTitle": "NEW & NOW",
           "sublist": [
