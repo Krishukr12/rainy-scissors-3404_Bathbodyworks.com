@@ -13,7 +13,8 @@ const Singledata = (item) => {
 
   
   const handleClick = (item) => {
-    console.log(item);
+    // console.log(item);
+    alert("added to cart");
    
     addtocart({
       item,
