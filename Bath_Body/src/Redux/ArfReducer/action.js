@@ -27,7 +27,7 @@ export const getData_fail = () => ({
 export const getData = () => (dispatch) => {
   dispatch(getData_req());
   return axios({
-    url:'http://localhost:8080/shop_body',
+    url:'https://bathandbodyherokuapi.herokuapp.com/shop_body',
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success(res.data));
@@ -39,7 +39,7 @@ export const getData = () => (dispatch) => {
 export const getDataSingle=(id)=>(dispatch)=>{
   dispatch(getData_req());
   return axios({
-    url:`http://localhost:8080/shop_body/${id}`,
+    url:`https://bathandbodyherokuapi.herokuapp.com/shop_body/${id}`,
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success_single(res.data));
@@ -51,7 +51,7 @@ export const getDataSingle=(id)=>(dispatch)=>{
 export const getData1=()=>(dispatch)=>{
   dispatch(getData_req());
   return axios({
-    url:'http://localhost:8080/Moisturizers',
+    url:'https://bathandbodyherokuapi.herokuapp.com/Moisturizers',
     method:'GET'
   }).then((res)=>{
     dispatch(getData_success(res.data));
@@ -62,7 +62,7 @@ export const getData1=()=>(dispatch)=>{
 export const getData2 = () => (dispatch) => {
   dispatch(getData_req());
   return axios({
-    url: "http://localhost:8080/candle",
+    url: "https://bathandbodyherokuapi.herokuapp.com/candle",
     method: "GET",
   })
     .then((res) => {
@@ -76,7 +76,7 @@ export const getData2 = () => (dispatch) => {
 export const getData3 = () => (dispatch) => {
   dispatch(getData_req());
   return axios({
-    url: "http://localhost:8080/newFragrance",
+    url: "https://bathandbodyherokuapi.herokuapp.com/newFragrance",
     method: "GET",
   })
     .then((res) => {
@@ -90,7 +90,7 @@ export const getData3 = () => (dispatch) => {
 export const getData2candle = (dispatch, value) => {
   dispatch(getData_req());
   return axios
-    .get(`http://localhost:8080/candle?_sort=price&_order=${value}`)
+    .get(`https://bathandbodyherokuapi.herokuapp.com/candle?_sort=price&_order=${value}`)
     .then((r) => {
       dispatch(updateDataAsc(r.data));
     })
@@ -101,7 +101,7 @@ export const getData2candle = (dispatch, value) => {
 export const getData2soap = (dispatch, value) => {
   dispatch(getData_req());
   return axios
-    .get(`http://localhost:8080/shop_body?_sort=price&_order=${value}`)
+    .get(`https://bathandbodyherokuapi.herokuapp.com/shop_body?_sort=price&_order=${value}`)
     .then((r) => {
       dispatch(updateDataAsc(r.data));
     })
@@ -112,7 +112,7 @@ export const getData2soap = (dispatch, value) => {
 export const getData2fragrance = (dispatch, value) => {
   dispatch(getData_req());
   return axios
-    .get(`http://localhost:8080/newFragrance?_sort=price&_order=${value}`)
+    .get(`https://bathandbodyherokuapi.herokuapp.com/newFragrance?_sort=price&_order=${value}`)
     .then((r) => {
       dispatch(updateDataAsc(r.data));
     })
@@ -123,7 +123,7 @@ export const getData2fragrance = (dispatch, value) => {
 export const getData2moisturizers = (dispatch, value) => {
   dispatch(getData_req());
   return axios
-    .get(`http://localhost:8080/Moisturizers?_sort=price&_order=${value}`)
+    .get(`https://bathandbodyherokuapi.herokuapp.com/Moisturizers?_sort=price&_order=${value}`)
     .then((r) => {
       dispatch(updateDataAsc(r.data));
     })
