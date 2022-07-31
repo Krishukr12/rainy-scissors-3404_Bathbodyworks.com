@@ -7,7 +7,7 @@ export const Dropdown = () => {
   let data = Title.Title;
   const [sublist, setsublist] = useState([]);
   return (
-    <div className={styles.mainDiv}>
+    <div style={{width:'0%'}} className={styles.mainDiv}>
       <div>
         {data.map((el, i) => {
           return (
@@ -16,7 +16,7 @@ export const Dropdown = () => {
                 onMouseOver={() => setsublist(el.list[0].sublist)}
                 onMouseOut={() => setsublist([])}
               >
-                {el.title}
+                <Link to={el.path}>{el.title}</Link>
               </p>
               <div className={styles.mainHovar}>
                 <div>

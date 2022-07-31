@@ -6,21 +6,23 @@ import { getCartData } from "../Redux/souReducer/action";
 import { useEffect } from "react";
 import pic from "./img2.png";
 import { Link, useNavigate } from "react-router-dom";
+import { getCart } from "../Redux/CartReducer/action";
+
 
 
 const Cart = () => {
   let Navigate =useNavigate();
-  const { cartProducts, totalPrice } = useSelector((state) => state);
+  const gettoCart = useSelector((state) => state.Cartreducer.gettoCart);
   const dispatch = useDispatch();
-   
+// console.log(AddtoCart)
   useEffect(() => {
-    getCartData(dispatch);
+    getCart(dispatch);
   }, [dispatch]);
 
   return (
     <>
     {
-      cartProducts.length === 0 ? (
+      gettoCart.length === 0 ? (
       <div style={{textAlign:"center",marginBottom:"20px"}} >
       <br/>
       <img className={styles.empCart} src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="" />    
@@ -36,7 +38,7 @@ const Cart = () => {
       </div>
       <div style={{ display: "flex" }}>
         <div className={styles.cartContainer}>
-          {cartProducts.map((e) => (
+          {gettoCart.map((e) => (
             <AddtoCart key={e.id} {...e} />
           ))}
         </div>
@@ -70,7 +72,7 @@ const Cart = () => {
           <p>Order Summary</p>
           <div style={{ display: "flex" }}>
             <p>Order amount</p>
-            <p style={{ marginLeft: "178px" }}>${totalPrice}</p>
+            <p style={{ marginLeft: "178px" }}></p>
           </div>
           <div style={{ display: "flex" }}>
             <p>Shipping Charges</p>
@@ -82,15 +84,15 @@ const Cart = () => {
           </div>
           <div style={{ display: "flex" }}>
             <p>Total MRP</p>
-            <p style={{ marginLeft: "205px" }}>${totalPrice}</p>
+            <p style={{ marginLeft: "205px" }}></p>
           </div>
           <hr className={styles.orderLine} />
           <div style={{ display: "flex" }}>
             <p style={{fontWeight: "bold",fontSize:"20px"}}>ORDER TOTAL</p>
-            <p style={{ marginLeft: "135px",fontWeight: "bold",fontSize:"20px" }}>${totalPrice}</p>
+            <p style={{ marginLeft: "135px",fontWeight: "bold",fontSize:"20px" }}></p>
           </div>
-          <Link to="/cart/checkout">
-          <button onClick={()=>Navigate("/cart/checkout")} className={styles.checkOut}>CONTINUE CHECKOUT</button>
+          <Link to="/checkout">
+          <button  className={styles.checkOut}>CONTINUE CHECKOUT</button>
           </Link>
         </div>
       </div>

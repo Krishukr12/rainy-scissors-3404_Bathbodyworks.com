@@ -5,12 +5,14 @@ import thunk from "redux-thunk"
 import { ArfReducer } from "./ArfReducer/reducer";
 import { kreducer } from "./krReducer/reducer";
 import { reducer } from '../Redux/souReducer/reducer';
+import { Cartreducer } from "./CartReducer/CartReducer";
 
 const rootreducer = combineReducers({
   AuthReducer: AuthReducer,
   ArfReducer: ArfReducer,
   Freducer: kreducer,
-  soureducer:reducer
+  soureducer:reducer,
+  Cartreducer:Cartreducer
 });
 
 export const store=legacy_createStore(rootreducer,applyMiddleware(thunk))

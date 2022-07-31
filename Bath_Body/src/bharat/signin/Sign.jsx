@@ -26,7 +26,7 @@ export const SigninCard=() =>{
   const [showPassword, setShowPassword] = useState(false);
   const {token,isAuth,isError,isLoading}=useSelector(state=>state.AuthReducer)
   const [password, setpassword] = useState("")
-  const [email, setemail] = useState("")
+  const [email, setemail] = useState("");
     const location = useLocation();
   const previousPath = location.state?.from?.pathname || "/";
   const dispatch=useDispatch()
@@ -34,7 +34,8 @@ export const SigninCard=() =>{
 
   const handlelogin=()=>{
     dispatch(signin({"username":email,"password":password}))
-         navigate(previousPath, { replace: true })
+        //  navigate(previousPath, { replace: true })
+        navigate(-1);
   }
 
   return (

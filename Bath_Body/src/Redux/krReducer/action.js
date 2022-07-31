@@ -33,7 +33,7 @@ export const updateDataAsc = (newData) => {
 export const getData1 = (dispatch) => {
   dispatch(requestFragnaceData());
   return axios
-    .get("http://localhost:8080/newFragrance")
+    .get("https://bathandbodyherokuapi.herokuapp.com/newFragrance")
     .then((r) => {
       dispatch(getFrangnanceData(r.data));
     })
@@ -43,7 +43,7 @@ export const getData1 = (dispatch) => {
 };
 export const getData2 = (dispatch, value) => {
   return axios
-    .get(`http://localhost:8080/newFragrance?_sort=price&_order=${value}`)
+    .get(`https://bathandbodyherokuapi.herokuapp.com/newFragrance?_sort=price&_order=${value}`)
     .then((r) => {
       dispatch(updateDataAsc(r.data));
     })
