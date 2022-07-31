@@ -1,50 +1,49 @@
 .wordwrapper {
-    text-align: center;
-    height: 12px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 4%;
-    margin-top: -12px;
-    z-index: 2;
+  text-align: center;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4%;
+  margin-top: -12px;
+  z-index: 2;
 }
-.word{
-        color: #666;
-            width: 37px;
-            height: 37px;
-            border: 1px solid #aaa;
-            border-radius: 20px;
-            background-color: #fff;
-            font-family: Trade Gothic W01 Light, Arial, sans-serif;
-            font-size: 13px;
-            letter-spacing: .52px;
-            line-height: 18px;
-            text-transform: uppercase;
-            position: absolute;
-            top: 27px;
-            left: calc(50% - 11px);
-            text-align: center;
-            line-height: 37px;
-            margin-top: 460px;
-            
-           
+.word {
+  color: #666;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  background-color: #fff;
+  font-family: Trade Gothic W01 Light, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.52px;
+  line-height: 18px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 27px;
+  left: calc(50% - 11px);
+  text-align: center;
+  line-height: 37px;
+  margin-top: 460px;
 }
-.line{
-    position: absolute;
-        left: 50.5%;
-        top: 25px;
-        bottom: 0;
-        width: 1px;
-        background: #ccc;
-        z-index: 1;
-        margin-top: 460px;
+.line {
+  position: absolute;
+  left: 50.5%;
+  top: 25px;
+  bottom: 0;
+  width: 1px;
+  background: #ccc;
+  z-index: 1;
+  margin-top: 460px;
+  height: 38rem;
 }
 
-@media all and (min-width:50px) and (max-width:720px) {
-    .wordwrapper{
-        display:none;
-    }
-    .line{
-        display:none;
-    }
+@media all and (min-width: 50px) and (max-width: 720px) {
+  .wordwrapper {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
 }
