@@ -4,7 +4,7 @@
 ________________________________________
 Project: Make a clone of Bath & Body Works website.
 
-Cloned-Website: https://regal-stardust-d954b0.netlify.app
+Cloned-Website: https://bathandbodyworks.vercel.app/
 
 <!-- Blog-Link:https://link.medium.com/UqCMu2uAoqb -->
 
